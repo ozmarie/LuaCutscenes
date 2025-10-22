@@ -683,6 +683,14 @@ function helpers.getRoomCoordinatesOffset(x, y)
     end
 end
 
+--- Get a cutscene node with the given name.
+-- Can be referenced to obtain X and Y coordinates at node position.
+-- @string name The name of the desired cutscene node entity.
+-- @treturn CutsceneNode The cutscene node.
+function helpers.getNode(name)
+    return celeste.CutsceneNode.Find(tostring(name))
+end
+
 --- Set session flag.
 -- @string flag Flag to set.
 -- @bool value State of flag.
